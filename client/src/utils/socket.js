@@ -5,7 +5,11 @@ let socket = null;
 export const connectSocket = (token) => {
   if (socket && socket.connected) return socket;
 
-  socket = io({
+  const socketUrl =
+    import.meta.env.VITE_SOCKET_URL ||
+    'http://127.0.0.1:5000';
+
+  socket = io(socketUrl, {
     auth: { token },
     autoConnect: true,
   });
