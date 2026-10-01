@@ -4,11 +4,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 const proxyConfig = {
   '/api': {
-    target: 'http://127.0.0.1:5000',
+    target: 'https://discord-final-70xj.onrender.com',
     changeOrigin: true,
   },
   '/socket.io': {
-    target: 'http://127.0.0.1:5000',
+    target: 'https://discord-final-70xj.onrender.com',
     ws: true,
     changeOrigin: true,
     configure: (proxy) => {
